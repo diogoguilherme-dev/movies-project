@@ -31,8 +31,6 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
-      // Em vez de importar todas as regras do React de uma vez,
-      // vamos usar apenas o necessário para evitar o bug:
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
       'react-hooks/rules-of-hooks': 'error',
@@ -53,7 +51,6 @@ export default [
             'external',
             'internal',
             ['parent', 'sibling', 'index']
-            // REMOVI 'object' e 'unknown' daqui, pois eles causavam o erro
           ]
         }
       ]
