@@ -1,4 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const scale = keyframes`
+    from {
+        transform:scale(0);
+    } 
+    to {
+        transform: scale(1);
+    }
+`
 
 export const Background = styled.div`
   width: 100vw;
@@ -21,6 +30,7 @@ export const Container = styled.div`
   position: fixed;
   padding: 50px;
   max-width: 1200px;
+  animation: ${scale} 0.2s linear;
 
   iframe {
     border: none;

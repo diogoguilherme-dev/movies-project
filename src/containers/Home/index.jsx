@@ -24,21 +24,7 @@ function Home() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    /*     async function getAllData() {
-      console.time('time')
-      setMovie(await getMovies())
-      setTopMovies(await getTopMovies())
-      setTopSeries(await getTopSeries())
-      setPopularSeries(await getPopularSeries())
-      setTopPeople(await getTopPeople())
-      console.timeEnd('time')
-    }
-
-    getAllData() */
-
     async function getAllData() {
-      console.time('time')
-
       Promise.all([
         getMovies(),
         getTopMovies(),
@@ -54,8 +40,6 @@ function Home() {
           setTopPeople(TopPeople)
         })
         .catch((error) => console.error(error))
-
-      console.timeEnd('time')
     }
 
     getAllData()
