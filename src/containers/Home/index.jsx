@@ -60,7 +60,7 @@ function Home() {
                 <Button red onClick={() => navigate(`/detalhes/${movie.id}`)}>
                   Assista agora
                 </Button>
-                <Button onClick={() => setShowModal(true)}>
+                <Button onClick={() => setShowModal(true)}> 
                   Assista ao Trailer
                 </Button>
               </ContainerButtons>
